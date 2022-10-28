@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage ("bulid"){
+            steps {
+                script {
+                    echo 'building'
+                    slackResponse = slackSend(botUser: true, channel: "testslack_euh", message: "Here is the primary message", tokenCredentialId: 'slack_token_regression_updates', username: 'regression_updates')
+                    slackSend(botUser: true, channel: slackResponse.threadId, message: "Build still in progress",tokenCredentialId: 'slack_token_regression_updates')
+                }
+            }
+        }
+        stage ("test") {
+            steps {
+                script {
+                    echo "test"
+                    slackSend(botUser:true,channel: slackResponse.threadId, message: "Thread reply #2",tokenCredentialId: 'slack_token_regression_updates')
+                }
+            }
+        }
+    }
+}
+
