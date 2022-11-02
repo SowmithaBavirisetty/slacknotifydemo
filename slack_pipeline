@@ -14,6 +14,7 @@ pipeline {
             steps {
                 script {
                     echo "test"
+                    echo "num"
                     slackSend(botUser:true,channel: slackResponse.threadId, message: "Thread reply #2",tokenCredentialId: 'slack_token_regression_updates')
                 }
             }
