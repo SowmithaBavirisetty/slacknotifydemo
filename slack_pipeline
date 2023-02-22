@@ -7,7 +7,7 @@ pipeline {
                     echo 'building'
                     slackResponse = slackSend(botUser: true, channel: "testslack_euh", message: "Build started for *CRYPTO-TEST-AUTOMATION/CLIC* jenkins job name-*${env.JOB_BASE_NAME}*- ${env.BUILD_DISPLAY_NAME} and the pull request number is ${env.CHANGE_ID}", tokenCredentialId: 'slack_token_regression_updates', username: 'regression_updates',color:'good')
                     slackSend(botUser:true, channel: slackResponse.threadId, message: "Build still in progress",tokenCredentialId: 'slack_token_regression_updates',color:'good',failOnError:true)
-                    echo "hi"
+                    //echo "hi"
                 }
             }
         }
