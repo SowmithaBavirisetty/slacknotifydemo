@@ -1,2 +1,2 @@
 # slacknotifydemo
-git hub versioning to automate
+git hub versioning to automatation
