@@ -1,4 +1,4 @@
-on: [push]
+/*on: [push]
 
 jobs:
   versioning_job:
@@ -43,4 +43,7 @@ jobs:
       "version": "1.01"
     }
   }
-}
+}*/
+
+
+git describe
