@@ -21,23 +21,7 @@ pipeline {
             }
         }
         
-        stage("version") {
-         steps {
-          script {
-            def version_number=""
-            def prDescription = getPRDescription()
-            dir("${env.WORKSPACE}/CLiC") {
-               Tag sh """ git describe --abbrev=0 --tags """
-               println($Tag)
-             }
-           /* if (prDescription){
-              version_number = getPRDescriptionVariable(prDescription, "semver")
-            }
-            if (version_number == "major") {*/
-           }
-           }
-           }
-            
+       
     
     
     
