@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     echo "test"
-                    slackSend(botUser:true,channel: slackResponse.threadId, message: "Thread reply #2",tokenCredentialId: 'slack_token_regression_updates',color:'good')
+                    //slackSend(botUser:true,channel: slackResponse.threadId, message: "Thread reply #2",tokenCredentialId: 'slack_token_regression_updates',color:'good')
                    //$Bulid_Number
                 }
             }
