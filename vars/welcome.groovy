@@ -4,7 +4,7 @@ def call(variant,link) {
     stages {
         stage('Hello') {
             steps {
-                echo("${variant}":"${link}")
+                echo("${variant}:${link}")
                 
             }
         }
