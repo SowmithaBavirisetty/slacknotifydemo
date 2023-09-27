@@ -1,8 +1,6 @@
 def call(name,variant) {
   pipeline {
-    agent {
-      ${name}
-    }
+    agent ${name}
     stages {
         stage('Hello') {
             steps {
