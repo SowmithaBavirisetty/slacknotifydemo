@@ -1,10 +1,10 @@
-def call(String name,variant) {
+def call(variant,link) {
   pipeline {
-    agent {label '${name}'}
+    agent any
     stages {
         stage('Hello') {
             steps {
-                echo("${variant}")
+                echo("${variant}":"${link}")
                 
             }
         }
