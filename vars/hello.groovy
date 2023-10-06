@@ -1,3 +1,3 @@
-def func (name) {
+def func(name) {
   echo "Hi ${name}"
 }
